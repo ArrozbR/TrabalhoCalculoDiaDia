@@ -1,4 +1,4 @@
-public class SalarioLiquido extends Calculo{
+public class SalarioLiquido extends Calculo implements Calculavel{
     double salarioBruto;
     double salarioLiquido;
     double INSS;
@@ -25,5 +25,10 @@ public class SalarioLiquido extends Calculo{
             salarioLiquido = salarioBruto - (salarioBruto * INSS);
             System.out.println("Seu Salario Liquido sera: R$" + String.format("%.2f", salarioLiquido));
         }
+    }
+
+    @Override
+    public void calculavel(){
+        System.out.println("Essa operacao e Calculavel!");
     }
 }

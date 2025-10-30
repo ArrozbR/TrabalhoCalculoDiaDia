@@ -28,5 +28,13 @@ public class Main {
 
         ConsumoEnergia consumoEnergia1 = new ConsumoEnergia(1000, 0.5);
         consumoEnergia1.executar();
+        System.out.println();
+
+        salarioLiquido1.calculavel();
+        imc1.calculavel();
+        consumoEnergia1.calculavel();
+        jurosSimples1.calculavel();
+        jurosComposto1.calculavel();
+        consumoEnergia1.calculavel();
     }
 }

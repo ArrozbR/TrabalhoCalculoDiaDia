@@ -1,4 +1,4 @@
-public class JurosComposto extends Calculo{
+public class JurosComposto extends Calculo implements Calculavel{
     double juros;
     double capitalInicial;
     double taxaJuros;
@@ -14,5 +14,10 @@ public class JurosComposto extends Calculo{
     public void executar(){
         juros = (capitalInicial * Math.pow((1 + taxaJuros), tempoAplicacao)) - capitalInicial;
         System.out.println("O Juros Composto sera: R$" + String.format("%.2f", juros));
+    }
+
+    @Override
+    public void calculavel(){
+        System.out.println("Essa operacao e Calculavel!");
     }
 }

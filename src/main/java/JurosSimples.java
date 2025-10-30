@@ -1,4 +1,4 @@
-public class JurosSimples extends Calculo{
+public class JurosSimples extends Calculo implements Calculavel{
     double juros = 0;
     double capitalInicial;
     double taxaJuros;
@@ -14,5 +14,10 @@ public class JurosSimples extends Calculo{
     public void executar(){
         juros = capitalInicial * taxaJuros * tempoAplicacao;
         System.out.println("O Juros Simples sera: R$" + String.format("%.2f", juros));
+    }
+
+    @Override
+    public void calculavel(){
+        System.out.println("Essa operacao e Calculavel!");
     }
 }

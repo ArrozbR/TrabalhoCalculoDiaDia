@@ -1,4 +1,4 @@
-public class ConversaoMoeda extends Calculo{
+public class ConversaoMoeda extends Calculo implements Calculavel{
     double valorReal;
     double cambioDolar = 5.37;
     double cambioEuro = 6.26;
@@ -29,5 +29,10 @@ public class ConversaoMoeda extends Calculo{
         else{
             System.out.println("O Valor para R$" + String.format("%.2f", valorReal) + " (utilizando a Cotacao "+ String.format("%.2f", cotacao) + ") sera: " + String.format("%.2f", valorReal / cotacao));
         }
+    }
+
+    @Override
+    public void calculavel(){
+        System.out.println("Essa operacao e Calculavel!");
     }
 }
